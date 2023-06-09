@@ -31,7 +31,7 @@ public class Tests {
   }
   //Metode, kas satur 
   public static void saktTestu() {
-    // Jautājumi uz kuriem lietotājam jāatbild
+    // Jautājumi uz kuriem lietotājam jāatbild.
     jautajumi = new String[] {
         "Kas ir masīvs?",																	
         "Kā deklarēt masīvu Java programmēšanas valodā?",
@@ -44,73 +44,73 @@ public class Tests {
         "Kā pārlūkot visus masīva elementus?",
         "Kas notiek, ja mēģina piekļūt masīva elementam ar indeksu, kas ir ārpus robežām?"
     };
-    // Masīvs, kas satur JCheckBoxes
+    // Masīvs, kas satur JCheckBoxes.
     JCheckBox[][] atbildesLodzini = new JCheckBox[jautajumi.length][4]; 
-    // Atbildes uz jautājumiem
+    // Atbildes uz jautājumiem.
     atbildes = new String[][] {
     	// 1. jautājums
         { "Mainīgais, kas var uzglabāt vairākus vienāda tipa vērtības.", 								// A
             "Datu struktūra, kas var uzglabāt gan primārās, gan atsauces tipus.", 						// B
-            "Objektu kolekcija, kam var dinamiski mainīt izmērus.",										// C
-            "Atslēgvārds, ko izmanto mainīgo deklarēšanai" },											// D
+            	"Objektu kolekcija, kam var dinamiski mainīt izmērus.",									// C
+            		"Atslēgvārds, ko izmanto mainīgo deklarēšanai" },									// D
         // 2. jautājums
         { "int[] mansMasīvs;", 																			// A
             "mansMasīvs = new int[];", 																	// B
-            "int mansMasīvs[];", 																		// C
-            "mansMasīvs = new int[];" }, 																// D
+            	"int mansMasīvs[];", 																	// C
+            		"mansMasīvs = new int[];" }, 														// D
         // 3. jautājums
         { "Izmantojot elementa indeksu kvadrātiekavās.", 												// A
             "Izsaucot metodi masīva objektā.", 															// B
-            "Izmantojot elementa vērtību.", 															// C
-            "Nevar piekļūt masīva elementam." }, 														// D
+            	"Izmantojot elementa vērtību.", 														// C
+            		"Nevar piekļūt masīva elementam." }, 												// D
         // 4. jautājums
         { "Pēdējā elementa indekss masīvā.", 															// A
             "Elementu skaits masīvā.", 																	// B
-            "Atmiņas izmērs, kas piešķirts masīvam.", 													// C
-            "Maksimālā vērtība, kas var tikt uzglabāta masīvā." }, 										// D
+            	"Atmiņas izmērs, kas piešķirts masīvam.", 												// C
+            		"Maksimālā vērtība, kas var tikt uzglabāta masīvā." }, 								// D
         // 5. jautājums
         { "int[] mansMasīvs = {1, 2, 3};", 																// A
             "int mansMasīvs[] = new int[3];", 															// B
-            "mansMasīvs = {1, 2, 3};", 																	// C
-            "int mansMasīvs[] = {1, 2, 3};" }, 															// D
+            	"mansMasīvs = {1, 2, 3};", 																// C
+            		"int mansMasīvs[] = {1, 2, 3};" }, 													// D
         // 6. jautājums
         { "Nē, visiem masīva elementiem jābūt vienāda tipa.", 											// A
             "Jā, Java ļauj sajaukt dažāda tipa elementus masīvā.", 										// B
-            "Tikai tad, ja masīvs ir deklarēts kā ģeneriskais tips.", 									// C
-            "Tikai tad, ja masīvs ir deklarēts kā objekta tips." }, 									// D
+            	"Tikai tad, ja masīvs ir deklarēts kā ģeneriskais tips.", 								// C
+            		"Tikai tad, ja masīvs ir deklarēts kā objekta tips." }, 							// D
         // 7. jautājums
         { "Izmantojot iebūvēto max() metodi klases Array.", 											// A
             "Sakārtojot masīvu augošā secībā.", 														// B
-            "Izmantojot Math.max() funkciju.", 															// C
-            "Izmantojot ciklu, lai salīdzinātu katru elementu ar pašreizējo maksimālo." }, 				// D
+            	"Izmantojot Math.max() funkciju.", 														// C
+            		"Izmantojot ciklu, lai salīdzinātu katru elementu ar pašreizējo maksimālo." }, 		// D
         // 8. jautājums
         { "Jā, var dinamiski pievienot vai noņemt elementus.",											// A
             "Nē, masīva izmērs ir fiksēts pēc deklarēšanas.", 											// B
-            "Tikai tad, ja izmanto ArrayList klasi, nevis parasto masīvu.",								// C
-            "Tikai tad, ja izmantojat resize() metodi, lai mainītu masīva izmēru." }, 					// D
+            	"Tikai tad, ja izmanto ArrayList klasi, nevis parasto masīvu.",							// C
+        			"Tikai tad, ja izmantojat resize() metodi, lai mainītu masīva izmēru." }, 			// D
         // 9. jautājums
         { "Izmantojot for ciklu ar indeksa mainīgo.", 													// A
             "Izmantojot forEach ciklu.", 																// B
-            "Izmantojot while ciklu un palielinot skaitītāja mainīgo.", 								// C
-            "Izsaucot iterate() metodi klases Array." }, 												// D
+            	"Izmantojot while ciklu un palielinot skaitītāja mainīgo.", 							// C
+            		"Izsaucot iterate() metodi klases Array." }, 										// D
         // 10. jautājums
         { "Programma izmet ArrayIndexOutOfBoundsException kļūdu.", 										// A
             "Indeksēšana apvīžas un piekļūst citam elementam.", 										// B
-            "Kompilators izmet brīdinājumu, bet programma normāli darbojas.", 							// C
-            "Programma izmet kļūdu un aptur darbību." } 												// D
+            	"Kompilators izmet brīdinājumu, bet programma normāli darbojas.", 						// C
+            		"Programma izmet kļūdu un aptur darbību." } 										// D
     };
-    //Masīvs, kas satur pareizo atbilžu indeksus
+    //Masīvs, kas satur pareizo atbilžu indeksus.
     parVaiNepAtbildes = new int[][] {
-        { 0, 1 },
-        { 0, 2 },
-        { 0, 3 },
-        { 0, 1 },
-        { 0, 3 },
-        { 1, 3 },
-        { 1, 3 },
-        { 0, 1 },
-        { 0, 2 },
-        { 0, 3 }
+        { 0, 1 },	//1
+        { 0, 2 },	//2
+        { 0, 3 },	//3
+        { 0, 1 },	//4
+        { 0, 3 },	//5
+        { 1, 3 },	//6
+        { 1, 3 },	//7
+        { 0, 1 },	//8
+        { 0, 2 },	//9
+        { 0, 3 }	//10
     };
     // izveido interaktīvu logu, kurā tiek rādīti jautājumi un atbildes izvēles iespējas.
     // Izveido boolean masīvu "parVaiNep", kurā tiks glabāta informācija par to, vai katrs jautājums ir atbildēts pareizi vai nepareizi.
@@ -144,12 +144,12 @@ public class Tests {
         // un rezultātu saglabā masīvā "parVaiNep".
         parVaiNep[i] = parbauditAtbildes(i, izveles);
       } else {
-    	// Ja lietotājs ir atcēlis atbildi vai aizvēris logu, iestata "numJautajumi" vērtību uz sākuma vērtību
+    	// Ja lietotājs ir atcēlis atbildi vai aizvēris logu, iestata "numJautajumi" vērtību uz sākuma vērtību.
         numJautajumi = i;
         break;
       }
     }
-    // Izvada lietotajam testa rezultātus
+    // Izvada lietotajam testa rezultātus.
     paraditRezultatus(parVaiNep);
   }
 
@@ -187,10 +187,10 @@ public class Tests {
 		  }
 	  }
 	  // Iterē caur masīvu "masivs" un pārbauda, vai kāda vērtība sakrīt ar norādīto vērtību "vertiba".
-	  // Ja sakrītība ir atrasta, tad atgriežam "true".
+	  // Ja sakrītība ir atrasta, tad atgriež "true".
 
 	  return false;
-	  // Ja pēc masīva iterācijas nav atrasta sakrītība, atgriežam "false".
+	  // Ja pēc masīva iterācijas nav atrasta sakrītība, atgriež "false".
   }
 
   
