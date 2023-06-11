@@ -5,99 +5,102 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 
 public class Tests {
-  private static String[] jautajumi;	//Masīvs, kas uzglabā jautājumus
-  private static String[][] atbildes;	//Masīvs, kas uzglabā atbildes
-  private static int[][] parVaiNepAtbildes;	//Masīvs, kas satur pareižo atbilžu vērtības
-  //Galvenā metode
+  private static String[] jautajumi;		//Masīvs, kas uzglabā jautājumus.
+  private static String[][] atbildes;		//Masīvs, kas uzglabā atbildes.
+  private static int[][] parVaiNepAtbildes;	//Masīvs, kas satur pareižo atbilžu vērtības.
+  
+  //Galvenā metode.
   public static void main(String[] args) {
-    Object[] opcijas = { "Sākt", "Iziet" }; //Masīvs, kas uzglabā vērtības, lai izietu vai sāktu testu
-    //Centrēts teksts, ko lietotājam parāda programmas sākumā, teksts centrēts izmantojot html funkcijas
+    String[] opcijas = { "Sākt", "Iziet" }; //Masīvs, kas uzglabā vērtības, lai izietu vai sāktu testu.
+    //Centrēts teksts, ko lietotājam parāda programmas sākumā, teksts centrēts izmantojot html funkcijas.
     String teksts = "<html><div style='text-align: center;'>Sveiks, izvēlies \"Sākt\", lai pildītu testu par<br>"
-        + "viendimensiju masīviem, \"Iziet\", lai aizvērtu aplikāciju.</div></html>";
-    //Izvēles logs. kurā ir iespējams sākt testu vai iziet
+        + "viendimensiju masīviem, \"Iziet\", lai aizvērtu aplikāciju."
+        + "<br>Katrā jautājumā ieķeksē divas pareizās atbildes."
+        + "<br>Veiksmi!</div></html>";
+    //Izvēles logs kurā ir iespējams sākt testu vai iziet.
     int izvele = JOptionPane.showOptionDialog(null, teksts, "Sākums",
         JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, opcijas, opcijas[0]);
     //switch, lai lietotājs varētu izvēlēties turpmāko darbību
     switch (izvele) {
       case 0:	
-        saktTestu();	//Aizsūta lietotāju uz testa pildīšanas daļu
+        saktTestu();	//Aizsūta lietotāju uz testa pildīšanas daļu.
         break;
       case 1:
-        JOptionPane.showMessageDialog(null, "Aplikācija apstādināta.");	//Izvada ziņu par spēles aizvēršanu
+        JOptionPane.showMessageDialog(null, "Aplikācija apstādināta.");	//Izvada ziņu par spēles aizvēršanu.
         break;
       default:
-        JOptionPane.showMessageDialog(null, "Aplikācija apstādināta.");	//Izvada ziņu par spēles aizvēršanu
+        JOptionPane.showMessageDialog(null, "Aplikācija apstādināta.");	//Izvada ziņu par spēles aizvēršanu.
     }
   }
   //Metode, kas satur 
   public static void saktTestu() {
     // Jautājumi uz kuriem lietotājam jāatbild.
     jautajumi = new String[] {
-        "Kas ir masīvs?",																	
-        "Kā deklarēt masīvu Java programmēšanas valodā?",
-        "Kā piekļūt masīva elementam?",
-        "Kas ir masīva garums?",
-        "Kā inicializēt masīvu ar vērtībām?",
-        "Vai masīvā var uzglabāt dažāda tipa elementus?",
-        "Kā atrast maksimālo vērtību veselo skaitļu masīvā?",
-        "Vai masīva izmēru var mainīt pēc tam, kad tas ir deklarēts?",
-        "Kā pārlūkot visus masīva elementus?",
-        "Kas notiek, ja mēģina piekļūt masīva elementam ar indeksu, kas ir ārpus robežām?"
+        "Kas ir masīvs?",																				//1														
+        "Kā deklarēt masīvu Java programmēšanas valodā?",												//2
+        "Kā piekļūt masīva elementam?",																	//3
+        "Kas ir masīva garums?",																		//4
+        "Kā inicializēt masīvu ar vērtībām?",															//5
+        "Vai masīvā var uzglabāt dažāda tipa elementus?",												//6
+        "Kā atrast maksimālo vērtību veselo skaitļu masīvā?",											//7
+        "Vai masīva izmēru var mainīt pēc tam, kad tas ir deklarēts?",									//8
+        "Kā pārlūkot visus masīva elementus?",															//9
+        "Kas notiek, ja mēģina piekļūt masīva elementam ar indeksu, kas ir ārpus robežām?"				//10
     };
     // Masīvs, kas satur JCheckBoxes.
     JCheckBox[][] atbildesLodzini = new JCheckBox[jautajumi.length][4]; 
-    // Atbildes uz jautājumiem.
+    // Atbildes uz jautājumiem..
     atbildes = new String[][] {
     	// 1. jautājums
-        { "Mainīgais, kas var uzglabāt vairākus vienāda tipa vērtības.", 								// A
-            "Datu struktūra, kas var uzglabāt gan primārās, gan atsauces tipus.", 						// B
-            	"Objektu kolekcija, kam var dinamiski mainīt izmērus.",									// C
-            		"Atslēgvārds, ko izmanto mainīgo deklarēšanai" },									// D
+        { "Mainīgais, kas var uzglabāt vairākas vienāda tipa vērtības.", 								// 0
+            "Datu struktūra, kas var uzglabāt gan primārās, gan atsauces tipus.", 						// 1
+            	"Objektu kolekcija, kam var dinamiski mainīt izmērus.",									// 2
+            		"Atslēgvārds, ko izmanto mainīgo deklarēšanai" },									// 3
         // 2. jautājums
-        { "int[] mansMasīvs;", 																			// A
-            "mansMasīvs = new int[];", 																	// B
-            	"int mansMasīvs[];", 																	// C
-            		"mansMasīvs = new int[];" }, 														// D
+        { "int[] mansMasīvs;", 																			// 0
+            "mansMasīvs = new[] int;", 																	// 1
+            	"int mansMasīvs[];", 																	// 2
+            		"mansMasīvs = new int[];" }, 														// 3
         // 3. jautājums
-        { "Izmantojot elementa indeksu kvadrātiekavās.", 												// A
-            "Izsaucot metodi masīva objektā.", 															// B
-            	"Izmantojot elementa vērtību.", 														// C
-            		"Nevar piekļūt masīva elementam." }, 												// D
+        { "Izmantojot elementa indeksu kvadrātiekavās.", 												// 0
+            "Izsaucot metodi masīva objektā.", 															// 1
+            	"Izmantojot indeksa elementu kvadrātiekavās.", 											// 2
+            		"Norādot atbilstošu indeksu, kas attiecas uz konkrētu elementu." }, 				// 3
         // 4. jautājums
-        { "Pēdējā elementa indekss masīvā.", 															// A
-            "Elementu skaits masīvā.", 																	// B
-            	"Atmiņas izmērs, kas piešķirts masīvam.", 												// C
-            		"Maksimālā vērtība, kas var tikt uzglabāta masīvā." }, 								// D
+        { "Pēdējā elementa indekss masīvā.", 															// 0
+            "Elementu skaits masīvā.", 																	// 1
+            	"Atmiņas izmērs, kas piešķirts masīvam.", 												// 2
+            		"Maksimālā vērtība, kas var tikta uzglabāta masīvā." }, 							// 3
         // 5. jautājums
-        { "int[] mansMasīvs = {1, 2, 3};", 																// A
-            "int mansMasīvs[] = new int[3];", 															// B
-            	"mansMasīvs = {1, 2, 3};", 																// C
-            		"int mansMasīvs[] = {1, 2, 3};" }, 													// D
+        { "int[] mansMasīvs = {1, 2, 3};", 																// 0
+            "int mansMasīvs[] = new int[3];", 															// 1
+            	"mansMasīvs = {1, 2, 3};", 																// 2
+            		"int mansMasīvs[] = {1, 2, 3};" }, 													// 3
         // 6. jautājums
-        { "Nē, visiem masīva elementiem jābūt vienāda tipa.", 											// A
-            "Jā, Java ļauj sajaukt dažāda tipa elementus masīvā.", 										// B
-            	"Tikai tad, ja masīvs ir deklarēts kā ģeneriskais tips.", 								// C
-            		"Tikai tad, ja masīvs ir deklarēts kā objekta tips." }, 							// D
+        { "Masīva elementiem jābūt vienāda tipa.", 														// 0
+            "Java ļauj jaukt dažāda tipa elementus masīvā.", 											// 1
+            	"Ja masīvs ir deklarēts kā dinamiskais tips.", 											// 2
+            		"Masīvs var uzglabāt objektus, kas var saturēt dažādu elementu tipus." }, 			// 3
         // 7. jautājums
-        { "Izmantojot iebūvēto max() metodi klases Array.", 											// A
-            "Sakārtojot masīvu augošā secībā.", 														// B
-            	"Izmantojot Math.max() funkciju.", 														// C
-            		"Izmantojot ciklu, lai salīdzinātu katru elementu ar pašreizējo maksimālo." }, 		// D
+        { "Izmantojot ciklu, lai savienotu katru vērtību ar pašreizējo maksimālo.", 														// 0
+            "Izmantojot funkciju, lai pašreizējo elementu salīdzinātu ar atlikušo masīvu un atgrieztu maksimālo vērtību.", 					// 1
+            	"Izmantojot Math.max() funkciju.", 																							// 2
+            		"Izmantojot ciklu, lai salīdzinātu katru elementu ar pašreizējo maksimālo." }, 											// 3
         // 8. jautājums
-        { "Jā, var dinamiski pievienot vai noņemt elementus.",											// A
-            "Nē, masīva izmērs ir fiksēts pēc deklarēšanas.", 											// B
-            	"Tikai tad, ja izmanto ArrayList klasi, nevis parasto masīvu.",							// C
-        			"Tikai tad, ja izmantojat resize() metodi, lai mainītu masīva izmēru." }, 			// D
+        { "Nē, Jāizveido jauns masīvs ar lielāku izmēru un jākopē vērtības",							// 0
+            "Nē, Masīva izmērs ir fiksēts pēc deklarēšanas.", 											// 1
+            	"Jā, masīva izmēru vienmēr var mainīt pēc tam, kad tas ir deklarēts.",					// 2
+        			"Tikai tad, ja nav iegūta ArrayIndexOutOfBoundsException kļūda" }, 					// 3
         // 9. jautājums
-        { "Izmantojot for ciklu ar indeksa mainīgo.", 													// A
-            "Izmantojot forEach ciklu.", 																// B
-            	"Izmantojot while ciklu un palielinot skaitītāja mainīgo.", 							// C
-            		"Izsaucot iterate() metodi klases Array." }, 										// D
+        { "Izmantojot for ciklu ar indeksa mainīgo.", 													// 0
+            "Izmantojot File Reader, lai nolasītu indeksa vērtību.", 									// 1
+            	"Izmantojot while ciklu un palielinot skaitītāja mainīgo.", 							// 2
+            		"Izmantojot File Writer, lai izvadītu indeksa vērtību." }, 							// 3
         // 10. jautājums
-        { "Programma izmet ArrayIndexOutOfBoundsException kļūdu.", 										// A
-            "Indeksēšana apvīžas un piekļūst citam elementam.", 										// B
-            	"Kompilators izmet brīdinājumu, bet programma normāli darbojas.", 						// C
-            		"Programma izmet kļūdu un aptur darbību." } 										// D
+        { "Programma izmet ArrayIndexOutOfBoundsException kļūdu.", 										// 0
+            "Indeksēšana turpinās un piekļūst citam elementam.", 										// 1
+            	"Kompilators izmet brīdinājumu, bet programma turpina strādāt.", 						// 2
+            		"Programma izmet kļūdu un aptur darbību." } 										// 3
     };
     //Masīvs, kas satur pareizo atbilžu indeksus.
     parVaiNepAtbildes = new int[][] {
@@ -106,7 +109,7 @@ public class Tests {
         { 0, 3 },	//3
         { 0, 1 },	//4
         { 0, 3 },	//5
-        { 1, 3 },	//6
+        { 0, 3 },	//6
         { 1, 3 },	//7
         { 0, 1 },	//8
         { 0, 2 },	//9
